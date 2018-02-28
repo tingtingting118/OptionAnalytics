@@ -1,4 +1,7 @@
- #Q1 contruct a short put butterfly using the informtion from example
+ 
+# To see details about background introduction, check README.md
+
+#Part 1 contruct a short put butterfly using the informtion from example
 t25 <- 25/365
 t15 <- 15/365
 t0<-0
@@ -44,7 +47,7 @@ shortput.butterfly <- data.frame(S=s,PL25=round(pl25,3),Delta25=round(delta25,3)
                    PL0=round(pl0,3),PL25_25=pl25_25,PL25_45=pl25_45) 
 
 
-#Q2 short strangle
+#part 2 short strangle
 k_strangle<-c(325,335)
 cost_strangle<- -c1[k==335] - p1[k==325]
 cost_strangle
@@ -76,7 +79,7 @@ short.strangle <- data.frame(S=s,PL25=round(pl25.strangle,3),Delta25=round(delta
                    PL0=round(pl0.strangle,3),PL25_25=pl25_25.strangle,pl25_45=pl25_45.strangle) 
 
 
-#Q3 - Long put at 320,short put at 325, short call at 335, long call at 340
+#Part 3 - Long put at 320,short put at 325, short call at 335, long call at 340
 cost_condor<- p1[k==320] - p1[k==325] - c1[k==335] +c1[k==340]
 cost_condor
 #it's a credit
